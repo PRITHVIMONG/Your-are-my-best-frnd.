@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry, Bestie.I really want you.</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Pacifico&display=swap');
+
+        :root {
+            --primary-color: #ff8fa3; /* Soft Pink */
+            --bg-color: #fff0f3;
+            --text-color: #594a4e;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Header Section */
+        header {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #ffe5e9 0%, #fff0f3 100%);
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Card Container */
+        .card {
+            background: var(--white);
+            max-width: 600px;
+            margin: -30px auto 30px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(255, 143, 163, 0.2);
+            position: relative;
+        }
+
+        /* Apology Section */
+        .apology-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Interactive Button (The Hug) */
+        .hug-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+        }
+
+        .hug-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 143, 163, 0.4);
+        }
+
+        /* Hidden Message Box */
+        #message-box {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #fff5f7;
+            border-radius: 10px;
+            border: 2px dashed var(--primary-color);
+        }
+
+        #hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 999;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: var(--primary-color);
+            animation: floatUp 3s linear forwards;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) scale(1); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+        }
+
+        /* Things to Make Her Happy */
+        .cheer-up-section {
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .compliment-box {
+            display: inline-block;
+            background: #ffebef;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .compliment-box:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: rotate(2deg);
+        }
+
+        /* Playlist Link */
+        .playlist-link {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: var(--primary-color);
+            border-bottom: 2px dashed var(--primary-color);
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            padding-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="hearts-container"></div>
+
+    <header>
+        <!-- REPLACE 'SIS' WITH HER NAME HERE -->
+        <h1>Hey Sehaj! 💖</h1>
+        <p class="subtitle">I know you are so good to me and I only need you.</p>
+    </header>
+
+    <div class="card">
+        <div class="apology-text">
+            <p>I'm really sorry for going quiet on you. It wasn't because I didn't want to talk to you—it was because I was struggling with myself, and I didn't want to drag you into my darkness. I also know that you are also struggling from your family suitions which is the reason of your quietness.I really not want to hurt you but i can't leave you in any type suition. I am really sooo attached to you.You know me much i am a small child please take care of me don't never angery with me.</p>
+            
+            <p>But that was wrong of me. You are my person. You are the one who makes me feel safe, and You shouldn't have pushed me away.</p>
+
+            <p><strong>Can we please start over?</strong></p>
+        </div>
+
+<div class="cheer-up-section">
+<button class="hug-btn" onclick="yes()" >Yes</button>
+<button class="hug-btn" onclick="no()">NO</button></div>
+
+        <!-- The Virtual Hug Button -->
+        <button class="hug-btn" onclick="sendHug()">Send Virtual Hug 🤗</button>
+
+        <div id="message-box">
+            <h3>❤️ I really need you as friend ! ❤️</h3>
+            <p id="dynamic-msg">You are the best friend ever!</p>
+        </div>
+    </div>
+
+    <!-- Cheer Up Section -->
+    <div class="cheer-up-section">
+        <h2>Things to make you smile (Click them!)</h2>
+        
+        <div class="compliment-box" onclick="showCompliment()">
+            Tell me I'm Cool 😎
+        </div>
+
+        <div class="compliment-box" onclick="shareMemory()">
+            Our Taste? 🎵
+        </div>
+
+        <br>
+        <!-- REPLACE THE LINK BELOW WITH A SPOTIFY/LINKTREE PLAYLIST LINK -->
+        <a href="file:///C:/Users/Waheguru/Desktop/img.html" target="_blank" class="playlist-link">Our memeory. 🎧</a>
+    </div>
+
+    <footer>
+        Made with Sorry hearts by my depressed bestie 🫂
+    </footer>
+
+    <script>
+        // 1. The "Hug" Logic
+        function sendHug() {
+            const btn = document.querySelector('.hug-btn');
+            const msgBox = document.getElementById('message-box');
+            const dynamicMsg = document.getElementById('dynamic-msg');
+
+            // Change Button Text
+            btn.innerHTML = "Hug Sent! ❤️";
+            btn.disabled = true;
+            
+            // Show the emotional message
+            msgBox.style.display = 'block';
+            
+            // Array of nice messages
+            const msgs = [
+                "I'm never going silent again.",
+                "You mean the world to me.",
+                "I'm here now.",
+                "Let's get ice cream soon."
+            ];
+            
+            // Pick random message
+            dynamicMsg.innerText = msgs[Math.floor(Math.random() * msgs.length)];
+
+            // Trigger Heart Animation
+            for(let i=0; i<30; i++) {
+                createHeart();
+            }
+        }
+
+        // 2. Hearts Animation
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.classList.add('heart');
+            
+            // Random position
+            heart.style.left = Math.random() * 100 + 'vw';
+            
+            // Random animation speed
+            heart.style.animationDuration = (Math.random() * 2 + 2) + 's'; // 2 to 4 seconds
+            
+            document.getElementById('hearts-container').appendChild(heart);
+
+            // Clean up
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+
+        // 3. Cheer Up Logic
+        function showCompliment() {
+            alert("You are literally the coolest person alive. Don't argue.");
+        }
+
+        function shareMemory() {
+            alert("Remember we meat as stranger slowly we are in friendship.We are complete more than one year as frnd and in want to convert nto infinite years.");
+        }
+function yes() {
+            alert("Congoratulation, you have a handsome friend.You can share any problem to him.");
+        }
+function no() {
+            alert("Can't be clickable, It s not a button.");
+        }
+
+    </script>
+</body>
+</html>
